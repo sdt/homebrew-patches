@@ -8,7 +8,7 @@ class TmuxSdt < Formula
   depends_on 'libevent'
 
   def install
-    system "sh", "autogen.sh" if build.head?
+    system "sh", "autogen.sh"
 
     ENV.append "LDFLAGS", '-lresolv'
     system "./configure", "--disable-dependency-tracking",
